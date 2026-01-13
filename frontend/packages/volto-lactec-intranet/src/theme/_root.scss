@@ -27,10 +27,12 @@ a {
   }
 }
 
-.contato {
+.contato-container,
+.endereco-container {
   padding: $spacing-small;
   border: 2px solid;
   border-radius: 5px;
+  margin: $spacing-small;
   .label {
     @include body-text-bold();
   }

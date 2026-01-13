@@ -10,7 +10,7 @@ const ContactInfo: React.FC<ContactInfoProps> = ({ content }) => {
   const { telefone, email } = content;
 
   return (
-    <Container narrow className="contato">
+    <Container narrow className="contato-container">
       <Container className="telefone">
         <span className="label">Telefone</span>:{' '}
         <span className="value">{telefone}</span>

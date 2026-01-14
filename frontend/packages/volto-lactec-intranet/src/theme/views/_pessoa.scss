@@ -1,0 +1,17 @@
+#page-document.pessoa-view {
+  @include default-container-width();
+  .documentImage {
+    max-width: 200px !important;
+    border-radius: 50%;
+  }
+
+  .documentDescription {
+    @include narrow-container-width();
+  }
+
+  .pessoa-header {
+    display: flex;
+    margin: 1rem;
+    gap: 2rem;
+  }
+}

@@ -17,7 +17,9 @@ export interface Contato {
   email?: string;
 }
 
-export interface Area extends Content, Endereco, Contato {}
+export interface Area extends Content, Endereco, Contato {
+  area?: RelatedItem;
+}
 
 export interface Pessoa extends Content, Endereco, Contato {
   cargo?: {

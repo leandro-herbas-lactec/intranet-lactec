@@ -3,7 +3,7 @@ import Image from '@plone/volto/components/theme/Image/Image';
 import { Container } from '@plone/components';
 import ContactInfo from 'volto-lactec-intranet/components/ContactInfo/ContactInfo';
 import EnderecoInfo from 'volto-lactec-intranet/components/EnderecoInfo/EnderecoInfo';
-import AreaInfo from 'volto-lactec-intranet/components/AreaInfo/AreaInfo';
+import AreaInfoPerfil from 'volto-lactec-intranet/components/AreaInfo/AreaInfoPerfil';
 import type { Pessoa } from 'volto-lactec-intranet/types/content';
 
 interface PessoaViewProps {
@@ -40,7 +40,7 @@ const PessoaView: React.FC<PessoaViewProps> = (props) => {
                 {content.cargo.title}
               </span>
             )}
-            {content.area && <AreaInfo content={content} />}
+            {content.area && <AreaInfoPerfil content={content} />}
           </div>
         </div>
       </div>

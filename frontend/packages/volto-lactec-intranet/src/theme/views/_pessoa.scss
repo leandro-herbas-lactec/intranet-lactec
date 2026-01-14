@@ -5,8 +5,12 @@
     border-radius: 50%;
   }
 
+  .documentFirstHeading {
+    margin-bottom: 1rem;
+  }
+
   .documentDescription {
-    @include narrow-container-width();
+    margin-bottom: 1rem;
   }
 
   .pessoa-header {

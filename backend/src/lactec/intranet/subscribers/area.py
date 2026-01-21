@@ -1,7 +1,9 @@
 from lactec.intranet import logger
 from lactec.intranet.content.area import Area
-from zope.lifecycleevent import ObjectAddedEvent
 from plone import api
+from zope.lifecycleevent import ObjectAddedEvent
+from zope.lifecycleevent import ObjectModifiedEvent
+
 
 def _add_editor_group(obj: Area):
     """Cria grupo de editores para a área criada"""
@@ -17,6 +19,7 @@ def _add_editor_group(obj: Area):
     api.group.grant_roles(group=group, roles=["Editor"], obj=obj)
     logger.info(f"Grupo {obj.title} recebeu papel de Editor")
 
+
 def _update_excluded_from_nav(obj: Area):
     """Update excluded_from_nav in the Area object."""
     description = obj.description
@@ -28,3 +31,8 @@ def added(obj: Area, event: ObjectAddedEvent):
     """Post creation handler for Area."""
     _update_excluded_from_nav(obj)
     _add_editor_group(obj)
+
+
+def modified(obj: Area, event: ObjectModifiedEvent):
+    """Post modification handler for Area."""
+    _update_excluded_from_nav(obj)

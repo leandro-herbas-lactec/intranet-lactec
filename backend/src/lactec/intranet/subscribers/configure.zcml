@@ -11,7 +11,7 @@
            zope.lifecycleevent.IObjectModifiedEvent"
       handler=".area.modified"
       />
-    
+
   <subscriber
       for="zope.interface.Interface"
       handler=".logger.log_events"

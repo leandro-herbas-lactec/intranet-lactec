@@ -1,0 +1,166 @@
+2026-01-21 15:15:37,536 INFO    [chameleon.config:39][MainThread] directory cache: /home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/instance/var/cache.
+2026-01-21 15:15:39,029 INFO    [plone.restapi.patches:16][MainThread] PATCH: Disabled ZPublisher.HTTPRequest.ZopeFieldStorage.VALUE_LIMIT. This enables file uploads larger than 1MB.
+2026-01-21 15:15:39,463 INFO    [plone.app.event:18][MainThread] icalendar has been set up to use pytz instead of zoneinfo.
+2026-01-21 15:15:41,037 INFO    [plone.volto:22][MainThread] Aliasing collective.folderish classes to plone.volto classes.
+Traceback (most recent call last):
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py", line 448, in endElementNS
+    self.context.end()
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/config.py", line 748, in end
+    self.stack.pop().finish()
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/config.py", line 917, in finish
+    args = toargs(context, *self.argdata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/config.py", line 1759, in toargs
+    args[str(name)] = field.fromUnicode(s)
+                      ^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/fields.py", line 174, in fromUnicode
+    value = self.context.resolve(name)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/config.py", line 220, in resolve
+    __import__(mname)
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/src/lactec/intranet/services/clima/get.py", line 2, in <module>
+    from lactec.intranet.services.clima import openmeteo
+ImportError: cannot import name 'openmeteo' from 'lactec.intranet.services.clima' (/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/src/lactec/intranet/services/clima/__init__.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/bin/runwsgi", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/Zope2/Startup/serve.py", line 251, in main
+    return command.run()
+           ^^^^^^^^^^^^^
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/Zope2/Startup/serve.py", line 189, in run
+    app = self.loadapp(app_spec, name=app_name, relative_to=base,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/Zope2/Startup/serve.py", line 220, in loadapp
+    return loadapp(app_spec, name=name, relative_to=relative_to, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/paste/deploy/loadwsgi.py", line 246, in loadapp
+    return loadobj(APP, uri, name=name, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/paste/deploy/loadwsgi.py", line 271, in loadobj
+    return context.create()
+           ^^^^^^^^^^^^^^^^
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/paste/deploy/loadwsgi.py", line 738, in create
+    return self.object_type.invoke(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/paste/deploy/loadwsgi.py", line 198, in invoke
+    app = context.app_context.create()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/paste/deploy/loadwsgi.py", line 738, in create
+    return self.object_type.invoke(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/paste/deploy/loadwsgi.py", line 136, in invoke
+    return fix_call(context.object, context.global_conf, **context.local_conf)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/paste/deploy/util.py", line 61, in fix_call
+    val = callable(*args, **kw)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/Zope2/Startup/run.py", line 61, in make_wsgi_app
+    starter.prepare()
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/Zope2/Startup/starter.py", line 38, in prepare
+    self.startZope()
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/Zope2/Startup/starter.py", line 94, in startZope
+    Zope2.startup_wsgi()
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/Zope2/__init__.py", line 36, in startup_wsgi
+    _startup()
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/Zope2/App/startup.py", line 126, in startup
+    load_zcml()
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/Zope2/App/startup.py", line 41, in load_zcml
+    load_site()
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/Zope2/App/zcml.py", line 45, in load_site
+    _context = xmlconfig.file(site_zcml)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py", line 717, in file
+    include(context, name, package)
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py", line 614, in include
+    processxmlfile(f, context)
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py", line 464, in processxmlfile
+    parser.parse(src)
+  File "/usr/lib/python3.12/xml/sax/expatreader.py", line 105, in parse
+    xmlreader.IncrementalParser.parse(self, source)
+  File "/usr/lib/python3.12/xml/sax/xmlreader.py", line 124, in parse
+    self.feed(buffer)
+  File "/usr/lib/python3.12/xml/sax/expatreader.py", line 211, in feed
+    self._parser.Parse(data, isFinal)
+  File "../Modules/pyexpat.c", line 475, in EndElement
+  File "/usr/lib/python3.12/xml/sax/expatreader.py", line 389, in end_element_ns
+    self._cont_handler.endElementNS(pair, None)
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py", line 450, in endElementNS
+    self._handle_exception(ex, info)
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py", line 448, in endElementNS
+    self.context.end()
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/config.py", line 748, in end
+    self.stack.pop().finish()
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/config.py", line 918, in finish
+    actions = self.handler(context, **args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py", line 614, in include
+    processxmlfile(f, context)
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py", line 464, in processxmlfile
+    parser.parse(src)
+  File "/usr/lib/python3.12/xml/sax/expatreader.py", line 105, in parse
+    xmlreader.IncrementalParser.parse(self, source)
+  File "/usr/lib/python3.12/xml/sax/xmlreader.py", line 124, in parse
+    self.feed(buffer)
+  File "/usr/lib/python3.12/xml/sax/expatreader.py", line 211, in feed
+    self._parser.Parse(data, isFinal)
+  File "../Modules/pyexpat.c", line 475, in EndElement
+  File "/usr/lib/python3.12/xml/sax/expatreader.py", line 389, in end_element_ns
+    self._cont_handler.endElementNS(pair, None)
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py", line 450, in endElementNS
+    self._handle_exception(ex, info)
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py", line 448, in endElementNS
+    self.context.end()
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/config.py", line 748, in end
+    self.stack.pop().finish()
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/config.py", line 918, in finish
+    actions = self.handler(context, **args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py", line 614, in include
+    processxmlfile(f, context)
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py", line 464, in processxmlfile
+    parser.parse(src)
+  File "/usr/lib/python3.12/xml/sax/expatreader.py", line 105, in parse
+    xmlreader.IncrementalParser.parse(self, source)
+  File "/usr/lib/python3.12/xml/sax/xmlreader.py", line 124, in parse
+    self.feed(buffer)
+  File "/usr/lib/python3.12/xml/sax/expatreader.py", line 211, in feed
+    self._parser.Parse(data, isFinal)
+  File "../Modules/pyexpat.c", line 475, in EndElement
+  File "/usr/lib/python3.12/xml/sax/expatreader.py", line 389, in end_element_ns
+    self._cont_handler.endElementNS(pair, None)
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py", line 450, in endElementNS
+    self._handle_exception(ex, info)
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py", line 448, in endElementNS
+    self.context.end()
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/config.py", line 748, in end
+    self.stack.pop().finish()
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/config.py", line 918, in finish
+    actions = self.handler(context, **args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py", line 614, in include
+    processxmlfile(f, context)
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py", line 464, in processxmlfile
+    parser.parse(src)
+  File "/usr/lib/python3.12/xml/sax/expatreader.py", line 105, in parse
+    xmlreader.IncrementalParser.parse(self, source)
+  File "/usr/lib/python3.12/xml/sax/xmlreader.py", line 124, in parse
+    self.feed(buffer)
+  File "/usr/lib/python3.12/xml/sax/expatreader.py", line 211, in feed
+    self._parser.Parse(data, isFinal)
+  File "../Modules/pyexpat.c", line 475, in EndElement
+  File "/usr/lib/python3.12/xml/sax/expatreader.py", line 389, in end_element_ns
+    self._cont_handler.endElementNS(pair, None)
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py", line 450, in endElementNS
+    self._handle_exception(ex, info)
+  File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/.venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py", line 237, in _handle_exception
+    raise ZopeXMLConfigurationError(info, ex)
+zope.configuration.xmlconfig.ZopeXMLConfigurationError: File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/src/lactec/intranet/services/clima/configure.zcml", line 6.2-12.8
+    File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/instance/etc/site.zcml", line 11.2-11.39
+    File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/src/lactec/intranet/configure.zcml", line 22.2-22.33
+    File "/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/src/lactec/intranet/services/configure.zcml", line 2.2-2.30
+    ImportError: cannot import name 'openmeteo' from 'lactec.intranet.services.clima' (/home/user/dev/treinamento-plone/202601-dominando-o-plone/intranet/backend/src/lactec/intranet/services/clima/__init__.py)
+make: *** [Makefile:91: start] Error 1

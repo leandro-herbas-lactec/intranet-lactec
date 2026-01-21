@@ -2,6 +2,7 @@ from lactec.intranet import logger
 
 import os
 
+
 def log_events(event: object):
     """Escreve no log todos os eventos disparados pelo processo do backend
     se a variável de ambiente DEBUG estiver definida.
